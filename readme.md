@@ -1,7 +1,7 @@
 http://qiita.com/tsgkdt/items/4e8a2f6b4fda7401b73f
-docker run --rm -v `pwd`:/tmp/sphinx --name sphinx sphinx-plantuml sphinx-build -b html /tmp/sphinx/source /tmp/sphinx/build
+docker run --rm -v `pwd`:/tmp/sphinx --name sphinx sphinx sphinx-build -b html /tmp/sphinx/source /tmp/sphinx/build
 
-docker run --rm -v `pwd`:/tmp/sphinx -it sphinx-ubuntu
+docker run --rm -v `pwd`:/tmp/sphinx -it sphinx
 cd /tmp/sphinx && sphinx-build source build
 
 sphinxを便利に
