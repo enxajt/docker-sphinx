@@ -4,3 +4,4 @@ plantuml.jar
 build/*
 source/*
 !.gitkeep
+!conf.py

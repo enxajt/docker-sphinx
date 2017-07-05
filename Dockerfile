@@ -16,24 +16,24 @@ RUN \
 COPY plantuml.jar $PLANTUML_DIR
 COPY TakaoFonts_00303.01.tar.xz /
 RUN \
-    #wget "https://launchpad.net/takao-fonts/trunk/15.03/+download/TakaoFonts_00303.01.tar.xz" && \
-    tar xvf /TakaoFonts_00303.01.tar.xz -C /usr/share/fonts/ && \
-    rm -f TakaoFonts_00303.01.tar.xz && \
-    ln -s /usr/share/fonts/TakaoFonts_00303.01 /usr/share/fonts/TakaoFonts && \
-    pip install --upgrade pip && \
-    pip install -U \
-      appdirs \
-      sphinx \
-      sphinxbootstrap4theme \
-      sphinx_materialdesign_theme \
-      sphinxcontrib-blockdiag \
-      sphinxcontrib-actdiag \
-      sphinxcontrib-nwdiag \
-      sphinxcontrib-seqdiag \
-      sphinxcontrib-plantuml \
-      commonmark \
-      recommonmark && \
-    pip freeze && \ 
-      apk del dependencies
+  #wget "https://launchpad.net/takao-fonts/trunk/15.03/+download/TakaoFonts_00303.01.tar.xz" && \
+  tar xvf /TakaoFonts_00303.01.tar.xz -C /usr/share/fonts/ && \
+  rm -f TakaoFonts_00303.01.tar.xz && \
+  ln -s /usr/share/fonts/TakaoFonts_00303.01 /usr/share/fonts/TakaoFonts && \
+  pip install --upgrade pip && \
+  pip install -U \
+    appdirs \
+    sphinx \
+    sphinxbootstrap4theme \
+    sphinx_materialdesign_theme \
+    sphinxcontrib-blockdiag \
+    sphinxcontrib-actdiag \
+    sphinxcontrib-nwdiag \
+    sphinxcontrib-seqdiag \
+    sphinxcontrib-plantuml \
+    commonmark \
+    recommonmark && \
+ pip freeze && \ 
+    apk del dependencies
 #CMD ["python3"]
 CMD ["/bin/bash"]

@@ -15,8 +15,11 @@ blockdiag_fontpath = '/usr/share/fonts/TakaoFonts/TakaoPGothic.ttf'
 plantjar = os.getenv('PLANTUML')
 plantuml = 'java -jar %s' % plantjar
 
-markdown_title = 'My Personal Video System outline'
-source_suffix = [ '.rst' ]
+graphviz_dot_args = [
+            '-Gfontname=ipag',
+            '-Nfontname=ipag',
+            '-Efontname=ipag' ]
 
-import sys
-import shlex
+markdown_title = 'System outline'
+source_suffix = [ '.rst' ]
+master_doc = 'index'
